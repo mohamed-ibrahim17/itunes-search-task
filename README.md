@@ -2,6 +2,10 @@
 
 A modern, responsive web app for discovering and exploring podcasts and episodes, built with Next.js, React, and Tailwind CSS.
 
+[See Solution Document](./PROBLEM_SOLUTION.md)
+
+> **Brief:** This document outlines the problem statement, solution approach, main challenges, and suggestions for the podcast search feature. It details the component structure, custom hooks, API integration, and discusses difficulties like API rate limiting and UI state management, along with ideas for further improvements.
+
 ---
 
 ## 🚀 Installation & Running the App
