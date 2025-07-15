@@ -1,5 +1,5 @@
-import { TopEpisodes } from "@/home/TopEpisodes";
-import { TopPodcasts } from "@/home/TopPodcasts";
+import { TopEpisodes } from "@/home/TopEpisodes/TopEpisodes";
+import { TopPodcasts } from "@/home/TopPodcasts/TopPodcasts";
 
 export default function Home() {
   return (
