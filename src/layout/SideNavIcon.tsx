@@ -1,0 +1,23 @@
+import { ReactNode } from "react";
+
+interface SideNavIconProps {
+  icon: ReactNode;
+  label: string;
+  href?: string;
+}
+
+export default function SideNavIcon({
+  icon,
+  label,
+  href = "#",
+}: SideNavIconProps) {
+  return (
+    <a
+      href={href}
+      className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#23243a] transition-colors text-white font-medium"
+    >
+      {icon}
+      {label}
+    </a>
+  );
+}
