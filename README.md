@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Podbay (Podcast Explorer)
 
-## Getting Started
+A modern, responsive web app for discovering and exploring podcasts and episodes, built with Next.js, React, and Tailwind CSS.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Installation & Running the App
+
+1. **Install dependencies:**
+   ```bash
+   pnpm install
+   # or
+   npm install
+   # or
+   yarn install
+   ```
+
+2. **Run the development server:**
+   ```bash
+   pnpm dev
+   # or
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+3. **Open your browser:**
+   Visit [http://localhost:3000](http://localhost:3000) to view the app.
+
+---
+
+## 🗂️ App Structure Preview
+
+```
+src/
+  app/
+    layout.tsx         # Root layout with providers and layout structure
+    page.tsx           # Main page (TopPodcasts & TopEpisodes)
+    globals.css        # Global styles (Tailwind)
+  components/
+    Spinner.tsx        # Loading spinner
+  home/
+    TopPodcasts.tsx    # Podcasts section with search & layout switch
+    TopEpisodes.tsx    # Episodes section with search & layout switch
+    shared/
+      card-menu.tsx    # Context menu for cards
+      scroll-navigation.tsx # Horizontal scroll navigation
+  layout/
+    SideNav.tsx        # Responsive sidebar navigation
+    Topbar.tsx         # Top navigation bar with search
+    useSideNav.tsx     # SideNav state management
+    SideNavIcon.tsx    # Icon for sidebar
+    SideNavSectionTitle.tsx # Section title for sidebar
+  hooks/
+    useITunesSearch.tsx # Podcast & episode search (iTunes API)
+  types/
+    itunes-search.ts   # Type definitions for search results
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🌐 Preview
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+> **Live Preview:** [Add your deployment link here, e.g. Vercel or Netlify]
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 📦 Used Libraries
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Next.js](https://nextjs.org/) (v15)
+- [React](https://react.dev/) (v19)
+- [Tailwind CSS](https://tailwindcss.com/) (v4)
+- [Lucide React](https://lucide.dev/icons/) (icons)
+- [TypeScript](https://www.typescriptlang.org/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📝 Quick Review
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Podbay is a sleek, modern podcast explorer webapp. It features:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Podcast & Episode Search:**
+  - Real-time search powered by the iTunes Search API.
+  - Results are displayed in visually rich cards with artwork, titles, and artist info.
+- **TopPodcasts & TopEpisodes Sections:**
+  - Switch between scroll, grid, and compact layouts for browsing.
+  - Context menus for each card (add, go to, share, hide, etc.).
+- **Responsive Layout:**
+  - Sidebar navigation (collapsible on mobile), topbar with search and menu.
+  - Fully responsive and mobile-friendly design.
+- **Modern UI/UX:**
+  - Custom theming, smooth transitions, and interactive elements.
+  - Custom scrollbar, animated spinner, and clean card menus.
+- **Tech Stack:**
+  - Built with Next.js App Router, React 19, Tailwind CSS 4, and TypeScript.
+
+> **Ideal for:** Podcast enthusiasts who want a fast, beautiful, and intuitive way to discover and explore podcasts and episodes.
+
+---
+
+## 📄 License
+
+MIT
