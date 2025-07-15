@@ -1,4 +1,4 @@
-import { CompactEpisodeCardProps } from "@/types/components";
+import { EpisodeCardProps } from "@/types/components";
 import { EllipsisVertical } from "lucide-react";
 import Image from "next/image";
 
@@ -7,7 +7,7 @@ export const CompactEpisodeCard = ({
   episode,
   onMenuOpen,
   menuOpen,
-}: CompactEpisodeCardProps) => {
+}: EpisodeCardProps) => {
   return (
     <div className="bg-[#161624] shadow flex items-center w-full my-1 pb-1 border-b-[0.5px] border-gray-400 hover:bg-[#23243a]">
       <div className="rounded-md overflow-hidden flex items-center justify-center mr-3 flex-shrink-0">

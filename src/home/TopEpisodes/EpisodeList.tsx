@@ -4,6 +4,7 @@ import { JSX } from "react";
 import { MenuPortal } from "../shared/MenuPortal";
 import { CompactEpisodeCard } from "./CompactEpisodeCard";
 import { EpisodeCard } from "./EpisodeCard";
+import { ListEpisodeCard } from "./ListEpisodeCard";
 
 // EpisodeList component for rendering episodes in different layouts
 export const EpisodeList = ({
@@ -26,6 +27,17 @@ export const EpisodeList = ({
     if (layout === "compact") {
       return (
         <CompactEpisodeCard
+          key={id}
+          episode={episode}
+          onMenuOpen={onMenuOpen}
+          menuOpen={menuOpen}
+        />
+      );
+    }
+
+    if (layout === "list") {
+      return (
+        <ListEpisodeCard
           key={id}
           episode={episode}
           onMenuOpen={onMenuOpen}
@@ -86,6 +98,19 @@ export const EpisodeList = ({
   }
 
   // compact layout
+  if (layout === "list") {
+    return (
+      <div className="flex flex-col gap-4">
+        {episodes.map(renderCard)}
+        <MenuPortal
+          menuState={menuState}
+          onClose={onMenuClose}
+          sectionRef={sectionRef}
+        />
+      </div>
+    );
+  }
+
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3 py-3">
       {episodes.map(renderCard)}

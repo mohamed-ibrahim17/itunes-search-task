@@ -7,12 +7,6 @@ export type EpisodeCardProps = {
   menuOpen: boolean;
 };
 
-export type CompactEpisodeCardProps = {
-  episode: ITunesSearchResult;
-  onMenuOpen: (episode: ITunesSearchResult, e: MouseEvent) => void;
-  menuOpen: boolean;
-};
-
 export type MenuPortalProps = {
   menuState: {
     episodeId?: number | null;
@@ -26,12 +20,21 @@ export type MenuPortalProps = {
 
 export type EpisodeListProps = {
   episodes: ITunesSearchResult[];
-  layout: "scroll" | "grid" | "compact";
+  layout: "scroll" | "grid" | "compact" | "list";
   menuState: { episodeId: number | null; x: number; y: number };
   onMenuOpen: (episode: ITunesSearchResult, e: MouseEvent) => void;
   onMenuClose: () => void;
   sectionRef: RefObject<HTMLDivElement | null>;
   scrollRef: RefObject<HTMLDivElement | null>;
+  ListEpisodeCard?: React.ComponentType<ListEpisodeCardProps>;
+};
+
+export type ListEpisodeCardProps = {
+  episode: ITunesSearchResult;
+  menuState: { episodeId: number | null; x: number; y: number };
+  onMenuOpen: (episode: ITunesSearchResult, e: MouseEvent) => void;
+  onMenuClose: () => void;
+  sectionRef: RefObject<HTMLDivElement | null>;
 };
 
 export type PodcastCardProps = {

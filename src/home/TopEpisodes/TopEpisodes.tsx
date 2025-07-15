@@ -22,7 +22,9 @@ export const TopEpisodes = () => {
     x: 0,
     y: 0,
   });
-  const [layout, setLayout] = useState<"scroll" | "grid" | "compact">("grid");
+  const [layout, setLayout] = useState<"scroll" | "grid" | "compact" | "list">(
+    "grid"
+  );
   const [layoutMenuOpen, setLayoutMenuOpen] = useState<boolean>(false);
   const [layoutMenuPos, setLayoutMenuPos] = useState<{ x: number; y: number }>({
     x: 0,
@@ -69,7 +71,7 @@ export const TopEpisodes = () => {
     });
     setLayoutMenuOpen((v) => !v);
   };
-  const handleLayoutChange = (type: "scroll" | "grid" | "compact") => {
+  const handleLayoutChange = (type: "scroll" | "grid" | "compact" | "list") => {
     setLayout(type);
     setLayoutMenuOpen(false);
   };
@@ -90,6 +92,11 @@ export const TopEpisodes = () => {
       label: "Switch layout to Compact",
       onClick: () => handleLayoutChange("compact"),
       show: layout !== "compact",
+    },
+    {
+      label: "Switch layout to List",
+      onClick: () => handleLayoutChange("list"),
+      show: layout !== "list",
     },
   ].filter((item) => item.show);
 
