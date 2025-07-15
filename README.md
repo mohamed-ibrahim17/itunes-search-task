@@ -61,7 +61,7 @@ src/
 
 ## 🌐 Preview
 
-> **Live Preview:** [Add your deployment link here, e.g. Vercel or Netlify]
+> **Live Preview:** [https://itunes-search-task.vercel.app/](https://itunes-search-task.vercel.app/)
 
 ---
 
