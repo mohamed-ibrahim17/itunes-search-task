@@ -9,7 +9,7 @@ export const EpisodeCard = ({
   menuOpen,
 }: EpisodeCardProps) => {
   return (
-    <div className="flex flex-row bg-gradient-to-r from-[#23243a] to-[#2d223a] min-w-[290px] rounded-md shadow-md h-[110px] relative overflow-hidden border border-[#a78bfa]/10">
+    <div className="flex flex-row bg-[color:var(--color-secondary)] min-w-[290px] rounded-md shadow-md h-[110px] relative overflow-hidden border border-[color:var(--color-primary-hover)]/10">
       {/* Image on the left */}
       <div className="flex-shrink-0 h-full w-[90px] flex items-center justify-center">
         <Image
@@ -21,16 +21,16 @@ export const EpisodeCard = ({
         />
       </div>
       {/* Info on the right */}
-      <div className="flex flex-col grow justify-between p-3">
+      <div className="flex flex-col grow justify-between p-3 max-w-[170px]">
         <div className="flex flex-col gap-1">
           <span
-            className="text-[#a78bfa] text-sm font-medium mb-1 truncate max-w-[150px] block"
+            className="text-[color:var(--color-primary)] text-sm font-medium mb-1 truncate block"
             title={episode.artistName}
           >
             {episode.artistName}
           </span>
           <span
-            className="text-[#b3b3b3] text-base truncate"
+            className="text-[color:var(--color-foreground)] text-xs truncate block"
             title={episode.collectionName || episode.trackName}
           >
             {episode.collectionName || episode.trackName}
@@ -43,16 +43,13 @@ export const EpisodeCard = ({
       {/* Menu button in top right */}
       <div className="flex items-start pt-1">
         <button
-          className={`p-1 rounded-full hover:bg-[#393a4d] focus:outline-none${
-            menuOpen ? " bg-[#393a4d]" : ""
+          className={`p-1 rounded-full hover:bg-[color:var(--color-border)] focus:outline-none${
+            menuOpen ? " bg-[color:var(--color-border)]" : ""
           }`}
           onClick={(e) => onMenuOpen(episode, e)}
           aria-label="Open menu"
         >
-          <EllipsisVertical
-            strokeWidth={2}
-            className="text-[#b3b3b3] w-6 h-6"
-          />
+          <EllipsisVertical strokeWidth={2} />
         </button>
       </div>
     </div>

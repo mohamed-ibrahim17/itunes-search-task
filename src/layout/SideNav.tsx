@@ -41,7 +41,7 @@ export default function SideNav() {
         aria-label="Close navigation menu"
       />
       <aside
-        className={`fixed md:static top-0 left-0 h-screen w-64 bg-[#151623] shadow-2xl flex flex-col justify-between p-4 border border-[#23243a] z-50 transition-transform duration-200 md:translate-x-0 ${
+        className={`fixed md:static top-0 left-0 h-screen w-64 bg-[color:var(--color-background)] dark:shadow-2xl shadow-xl flex flex-col justify-between p-4 border border-[color:var(--color-secondary)] z-50 transition-transform duration-200 md:translate-x-0 ${
           open ? "translate-x-0" : "-translate-x-full"
         } md:block`}
         style={{ boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)" }}
@@ -68,7 +68,7 @@ export default function SideNav() {
           </nav>
         </div>
         {/* Footer */}
-        <div className="text-xs text-[#7a7b8c] flex flex-col gap-1 items-start absolute bottom-4">
+        <div className="text-xs text-[color:var(--color-secondary)] flex flex-col gap-1 items-start absolute bottom-4">
           <span>Podbay v2.9.6 by Fancy Soups.</span>
           <div className="flex gap-2">
             <a href="#" className="hover:underline">

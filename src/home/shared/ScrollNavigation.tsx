@@ -20,14 +20,14 @@ export const SliderScrollNavigation = ({
   return (
     <>
       <button
-        className="p-2 rounded-full hover:bg-[#393a4d] focus:outline-none disabled:opacity-40"
+        className="p-2 rounded-full hover:bg-[color:var(--color-border)] focus:outline-none disabled:opacity-40"
         onClick={() => handleScroll("left")}
         aria-label="Scroll left"
       >
         <ChevronLeft className="w-6 h-6" />
       </button>
       <button
-        className="p-2 rounded-full hover:bg-[#393a4d] focus:outline-none disabled:opacity-40"
+        className="p-2 rounded-full hover:bg-[color:var(--color-border)] focus:outline-none disabled:opacity-40"
         onClick={() => handleScroll("right")}
         aria-label="Scroll right"
       >

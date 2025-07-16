@@ -1,4 +1,4 @@
-# Podbay (Podcast Explorer)
+# iTunes Search App (Podcasts Explorer)
 
 A modern, responsive web app for discovering and exploring podcasts and episodes, built with Next.js, React, and Tailwind CSS.
 

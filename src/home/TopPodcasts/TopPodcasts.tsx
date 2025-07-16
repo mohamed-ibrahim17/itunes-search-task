@@ -83,7 +83,7 @@ export const TopPodcasts = () => {
     <section className="w-full mx-auto" ref={sectionRef}>
       {/* Top Header */}
       <div className="flex items-center justify-between mb-4 border-b-[0.5px] py-4 px-5">
-        <h2 className="text-xl font-bold text-white">
+        <h2 className="text-xl font-bold text-[color:var(--color-foreground)]">
           Top podcasts for {searchTerm}
         </h2>
         <div className="flex items-center gap-2 relative">
@@ -91,14 +91,13 @@ export const TopPodcasts = () => {
             <SliderScrollNavigation scrollRef={scrollRef} />
           )}
           <button
-            className="p-2 rounded-full hover:bg-[#393a4d] focus:outline-none"
+            className={`p-1 rounded-full hover:bg-[color:var(--color-border)] focus:outline-none${
+              layoutMenuOpen ? " bg-[color:var(--color-border)]" : ""
+            }`}
             onClick={handleLayoutMenuOpen}
             aria-label="Switch layout"
           >
-            <EllipsisVertical
-              strokeWidth={2}
-              className="text-[#b3b3b3] w-6 h-6"
-            />
+            <EllipsisVertical strokeWidth={2} />
           </button>
           {layoutMenuOpen && sectionRef.current && (
             <MenuPortal

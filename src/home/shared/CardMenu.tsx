@@ -29,9 +29,10 @@ export const CardMenu = ({
 
   return (
     <div
-      className="absolute z-5 min-w-[180px] rounded-md border border-[#a78bfa]/40 shadow-2xl"
+      className="absolute z-5 min-w-[180px] rounded-md border border-[color:var(--color-primary-hover)]/40 shadow-2xl"
       style={{
-        background: "linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%)",
+        background:
+          "linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-hover) 100%)",
         top: y,
         left: x,
         padding: 0,
@@ -47,7 +48,7 @@ export const CardMenu = ({
           height: 0,
           borderLeft: "12px solid transparent",
           borderRight: "12px solid transparent",
-          borderBottom: "12px solid #a78bfa",
+          borderBottom: "12px solid var(--color-primary-hover)",
           filter: "drop-shadow(0 2px 4px rgba(124,58,237,0.15))",
           zIndex: 10,
         }}
@@ -57,7 +58,7 @@ export const CardMenu = ({
           <React.Fragment key={item.label}>
             <li>
               <button
-                className={`w-full text-left p-3 cursor-pointer text-white text-sm font-medium hover:bg-[#a78bfa]/30 transition ${
+                className={`w-full text-left p-3 cursor-pointer text-[color:var(--color-background)] text-sm font-medium hover:bg-[color:var(--color-primary-hover)]/30 transition ${
                   idx === 0 ? "rounded-t-2xl" : ""
                 } ${idx === menuItems.length - 1 ? "rounded-b-2xl" : ""}`}
                 style={{ letterSpacing: "0.01em" }}
@@ -69,7 +70,7 @@ export const CardMenu = ({
             </li>
             {idx < menuItems.length - 1 && (
               <li>
-                <div className="border-t border-[#a78bfa]/30 mx-5" />
+                <div className="border-t border-[color:var(--color-primary-hover)]/30 mx-5" />
               </li>
             )}
           </React.Fragment>

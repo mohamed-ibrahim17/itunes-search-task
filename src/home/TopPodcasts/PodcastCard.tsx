@@ -8,7 +8,7 @@ export const PodcastCard = ({
   menuOpen,
 }: PodcastCardProps) => {
   return (
-    <div className="bg-[#23243a] rounded-xl shadow-md flex flex-col items-center w-56 mx-2">
+    <div className="bg-[color:var(--color-secondary)] rounded-xl shadow-md flex flex-col items-center w-56 mx-2">
       <div className="rounded-md overflow-hidden flex items-center justify-center">
         <Image
           src={podcast.artworkUrl100 || "/logo.svg"}
@@ -21,13 +21,13 @@ export const PodcastCard = ({
       <div className="flex items-center justify-between w-full px-2 pt-2">
         <div className="truncate">
           <h6
-            className="text-white text-sm font-semibold truncate"
+            className="text-[color:var(--color-primary)] text-sm font-medium mb-1 truncate max-w-[150px] block"
             title={podcast.collectionName || podcast.trackName || ""}
           >
             {podcast.collectionName || podcast.trackName}
           </h6>
           <span
-            className="text-[#b3b3b3] text-xs truncate"
+            className="text-[color:var(--color-foreground)] text-sm font-medium mb-1 truncate max-w-[150px] block"
             title={podcast.artistName || ""}
           >
             {podcast.artistName}
@@ -35,16 +35,13 @@ export const PodcastCard = ({
         </div>
         <div className="relative flex-shrink-0 ml-2">
           <button
-            className={`p-1 rounded-full hover:bg-[#393a4d] focus:outline-none${
-              menuOpen ? " bg-[#393a4d]" : ""
+            className={`p-1 rounded-full hover:bg-[color:var(--color-border)] focus:outline-none${
+              menuOpen ? " bg-[color:var(--color-border)]" : ""
             }`}
             onClick={(e) => onMenuOpen(podcast, e)}
             aria-label="Open menu"
           >
-            <EllipsisVertical
-              strokeWidth={2}
-              className="text-[#b3b3b3] w-5 h-5"
-            />
+            <EllipsisVertical strokeWidth={2} />
           </button>
         </div>
       </div>

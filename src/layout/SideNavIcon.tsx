@@ -14,7 +14,7 @@ export default function SideNavIcon({
   return (
     <a
       href={href}
-      className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#23243a] transition-colors text-white font-medium"
+      className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[color:var(--color-secondary)] transition-colors text-[color:var(--color-foreground)] font-medium"
     >
       {icon}
       {label}
