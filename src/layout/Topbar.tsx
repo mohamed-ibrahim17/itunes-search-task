@@ -5,6 +5,7 @@ import {
   ChevronRight,
   EllipsisVertical,
   Menu,
+  X,
 } from "lucide-react";
 import React, { useState, useRef, useEffect } from "react";
 import { useITunesSearch } from "@/hooks/useITunesSearch";
@@ -73,10 +74,21 @@ export default function Topbar() {
         <input
           type="text"
           placeholder="Search for podcasts and episodes..."
-          className="w-full rounded-lg px-5 py-2 bg-[color:var(--color-secondary)] text-[color:var(--color-foreground)] placeholder-[color:var(--color-secondary)] focus:outline-none focus:ring-2 focus:ring-[color:var(--color-primary)]"
+          className="w-full rounded-lg px-5 py-2 bg-[color:var(--color-secondary)] text-[color:var(--color-foreground)] placeholder-[color:var(--color-secondary)] focus:outline-none focus:ring-2 focus:ring-[color:var(--color-primary)] pr-10"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
+        {searchTerm && (
+          <button
+            type="button"
+            aria-label="Clear search"
+            onClick={() => setSearchTerm("")}
+            className="absolute right-3 top-1/2 -translate-y-1/2 p-1 rounded-full hover:bg-[color:var(--color-border)] focus:outline-none text-[color:var(--color-primary)] cursor-pointer"
+            style={{ zIndex: 2 }}
+          >
+            <X />
+          </button>
+        )}
       </div>
       {/* Right: Auth & Menu */}
       <div className="flex items-center gap-3 relative">
